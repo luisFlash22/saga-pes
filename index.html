@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheFlashDroid | Zona de Descargas</title>
+    <style>
+        body {
+            background-color: #0f0f12;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 40px;
+        }
+        h1 { color: #00bcd4; margin-bottom: 5px; }
+        .subtitle { color: #888; font-size: 16px; }
+        
+        .section-title {
+            text-align: left;
+            max-width: 800px;
+            margin: 30px auto 15px auto;
+            color: #00bcd4;
+            font-size: 20px;
+            border-bottom: 1px solid #2a2a3a;
+            padding-bottom: 5px;
+        }
+
+        .grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        /* Tarjeta para cada juego/parche o herramienta */
+        .card {
+            background: #1a1a24;
+            border: 1px solid #2a2a3a;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            transition: 0.3s;
+        }
+        .card:hover {
+            border-color: #00bcd4;
+            transform: translateY(-2px);
+        }
+        .card-info h3 {
+            margin: 0 0 5px 0;
+            color: #fff;
+        }
+        .card-info p {
+            margin: 0 0 8px 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Contenedor de la contraseña y botón de copiar */
+        .pass-container {
+            display: inline-flex;
+            align-items: center;
+            background: #0f0f12;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid #3a3a4a;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+        .pass-text {
+            color: #ff9800;
+            font-family: monospace;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .btn-copy {
+            background: #2a2a3a;
+            color: #fff;
+            border: none;
+            padding: 3px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn-copy:hover {
+            background: #00bcd4;
+            color: #0f0f12;
+        }
+        
+        /* Botón estándar para juegos */
+        .btn {
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.2s;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+        .btn:hover {
+            background-color: #e65100;
+        }
+
+        /* Botón secundario para utilidades/herramientas */
+        .btn-util {
+            background-color: #00bcd4;
+            color: #0f0f12;
+            padding: 12px 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.2s;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+        .btn-util:hover {
+            background-color: #008ba3;
+            color: white;
+        }
+
+        /* Ajuste para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .btn, .btn-util {
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>⚡ TheFlashDroid ⚡</h1>
+        <p class="subtitle">Catálogo Oficial de Juegos, Parches y Herramientas</p>
+    </div>
+
+    <!-- SECCIÓN DE JUEGOS -->
+    <div class="section-title">🎮 Biblioteca de Juegos</div>
+    <div class="grid">
+        
+        <!-- ELEMENTO 1: PES 2013 -->
+        <div class="card">
+            <div class="card-info">
+                <h3>⚽ Pro Evolution Soccer 2013</h3>
+                <p>Original sin mods (Formato .7z)</p>
+                <div class="pass-container">
+                    <span>Clave: </span>&nbsp;<span class="pass-text" id="pes-pass">123asd+</span>
+                    <button class="btn-copy" onclick="copyPassword('pes-pass', this)">Copiar</button>
+                </div>
+            </div>
+            <a href="https://www.mediafire.com/file/u2mwh2os2ivuukt/Pes+2013+(123asd+).7z/file" class="btn" target="_blank">Obtener Juego</a>
+        </div>
+
+    </div>
+
+    <!-- SECCIÓN DE HERRAMIENTAS EXTRAS -->
+    <div class="section-title">🛠️ Herramientas Necesarias</div>
+    <div class="grid">
+        
+        <!-- HERRAMIENTA 1: PEAZIP -->
+        <div class="card">
+            <div class="card-info">
+                <h3>📦 PeaZip (Extractor de Archivos)</h3>
+                <p>Necesario para descomprimir el juego y los parches .7z o .rar</p>
+            </div>
+            <a href="https://peazip.github.io/" class="btn-util" target="_blank">Descargar</a>
+        </div>
+
+        <!-- HERRAMIENTA 2: FDM -->
+        <div class="card">
+            <div class="card-info">
+                <h3>🚀 Free Download Manager (FDM)</h3>
+                <p>Acelera tus descargas y evita que se cancelen a mitad de camino</p>
+            </div>
+            <a href="https://www.freedownloadmanager.org/es/" class="btn-util" target="_blank">Descargar</a>
+        </div>
+
+    </div>
+
+    <!-- FUNCIÓN JAVASCRIPT PARA COPIAR -->
+    <script>
+        function copyPassword(elementId, button) {
+            // Obtenemos el texto de la clave
+            const passwordText = document.getElementById(elementId).innerText;
+            
+            // Usamos la API del portapapeles del navegador
+            navigator.clipboard.writeText(passwordText).then(() => {
+                // Cambiamos el texto del botón temporalmente
+                const originalText = button.innerText;
+                button.innerText = "¡Copiado!";
+                button.style.backgroundColor = "#00bcd4";
+                button.style.color = "#0f0f12";
+                
+                // Lo regresamos a la normalidad después de 2 segundos
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.style.backgroundColor = "";
+                    button.style.color = "";
+                }, 2000);
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
