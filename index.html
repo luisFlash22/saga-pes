@@ -95,6 +95,21 @@
             background: #00bcd4;
             color: #0f0f12;
         }
+
+        /* Estilo para el Hash de verificación */
+        .hash-container {
+            display: block;
+            margin-top: 10px;
+            font-size: 11px;
+            color: #666;
+            font-family: monospace;
+            word-break: break-all; /* Evita que rompa el diseño en móviles */
+            line-height: 1.4;
+        }
+        .hash-label {
+            color: #00bcd4;
+            font-weight: bold;
+        }
         
         /* Botón estándar para juegos */
         .btn {
@@ -165,6 +180,10 @@
                     <span>Clave: </span>&nbsp;<span class="pass-text" id="pes-pass">123asd+</span>
                     <button class="btn-copy" onclick="copyPassword('pes-pass', this)">Copiar</button>
                 </div>
+                <!-- Hash de Verificación -->
+                <div class="hash-container">
+                    <span class="hash-label">SHA-256:</span> e84acec3e18bee4b07dec8bb1223c37758028ea5d72a89b7449669d4e61cf65a
+                </div>
             </div>
             <a href="https://www.mediafire.com/file/u2mwh2os2ivuukt/Pes_2013_%2528123asd%252B%2529.7z/file" class="btn" target="_blank">Obtener Juego</a>
         </div>
@@ -174,6 +193,15 @@
     <!-- SECCIÓN DE HERRAMIENTAS EXTRAS -->
     <div class="section-title">🛠️ Herramientas Necesarias</div>
     <div class="grid">
+	
+		<!-- HERRAMIENTA 0: VERIFICADOR HASH -->
+        <div class="card">
+            <div class="card-info">
+                <h3>✔ Verificador De Integridad (Hash)</h3>
+                <p>Verifica la integridad de tus archivos mediante el algoritmo SHA-256</p>
+            </div>
+            <a href="https://github.com/luisFlash22/verificador-hash.git" class="btn-util" target="_blank">Descargar</a>
+        </div>
         
         <!-- HERRAMIENTA 1: PEAZIP -->
         <div class="card">
