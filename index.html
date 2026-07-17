@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>SpeedyDroid | Zona de Descargas</title>
     <style>
         body {
@@ -38,7 +38,7 @@
             gap: 20px;
         }
         
-        /* Tarjeta para cada juego/parche o herramienta */
+        /* Tarjeta principal */
         .card {
             background: #1a1a24;
             border: 1px solid #2a2a3a;
@@ -63,6 +63,14 @@
             color: #aaa;
             font-size: 14px;
         }
+
+        /* Contenedor de contraseñas dentro de la tarjeta */
+        .pass-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 12px 0;
+        }
         
         /* Contenedor de la contraseña y botón de copiar */
         .pass-container {
@@ -73,7 +81,11 @@
             border-radius: 6px;
             border: 1px solid #3a3a4a;
             font-size: 13px;
-            margin-top: 4px;
+            width: fit-content;
+        }
+        .pass-label {
+            color: #888;
+            font-size: 12px;
         }
         .pass-text {
             color: #ff9800;
@@ -100,11 +112,11 @@
         /* Estilo para el Hash de verificación */
         .hash-container {
             display: block;
-            margin-top: 10px;
+            margin-top: 6px;
             font-size: 11px;
             color: #666;
             font-family: monospace;
-            word-break: break-all; /* Evita que rompa el diseño en móviles */
+            word-break: break-all;
             line-height: 1.4;
         }
         .hash-label {
@@ -112,6 +124,14 @@
             font-weight: bold;
         }
         
+        /* Contenedor de botones de descarga */
+        .actions-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 15px;
+        }
+
         /* Botón estándar para juegos */
         .btn {
             background-color: #ff9800;
@@ -122,13 +142,30 @@
             border-radius: 8px;
             transition: 0.2s;
             white-space: nowrap;
-            margin-left: 15px;
+            text-align: center;
         }
         .btn:hover {
             background-color: #e65100;
         }
 
-        /* Botón secundario para utilidades/herramientas */
+        /* Botón secundario para comentarios u opciones extras */
+        .btn-secundario {
+            background-color: #444454;
+            color: white;
+            padding: 12px 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.2s;
+            white-space: nowrap;
+            text-align: center;
+        }
+        .btn-secundario:hover {
+            background-color: #555569;
+            color: #00bcd4;
+        }
+
+        /* Botón estándar para utilidades/herramientas */
         .btn-util {
             background-color: #00bcd4;
             color: #0f0f12;
@@ -152,10 +189,12 @@
                 align-items: flex-start;
                 gap: 15px;
             }
-            .btn, .btn-util {
+            .actions-container {
                 margin-left: 0;
                 width: 100%;
-                text-align: center;
+            }
+            .btn, .btn-secundario, .btn-util {
+                width: 100%;
                 box-sizing: border-box;
             }
         }
@@ -172,21 +211,39 @@
     <div class="section-title">🎮 Biblioteca de Juegos</div>
     <div class="grid">
         
-        <!-- ELEMENTO 1: PES 2013 -->
+        <!-- ELEMENTO 1: PES 2013 + COMENTARIOS -->
         <div class="card">
             <div class="card-info">
                 <h3>⚽ Pro Evolution Soccer 2013</h3>
-                <p>Original sin mods (Formato .7z)</p>
-                <div class="pass-container">
-                    <span>Clave: </span>&nbsp;<span class="pass-text" id="pes-pass">123asd+</span>
-                    <button class="btn-copy" onclick="copyPassword('pes-pass', this)">Copiar</button>
+                <p>El archivo del juego base incluye los relatos en español latino. Los <b>Comentarios ES</b> son los relatos en español de España que puedes descargar de manera opcional.</p>
+                
+                <div class="pass-group">
+                    <!-- Clave Juego -->
+                    <div class="pass-container">
+                        <span class="pass-label">Clave Juego: </span>&nbsp;<span class="pass-text" id="pes-pass">123asd+</span>
+                        <button class="btn-copy" onclick="copyPassword('pes-pass', this)">Copiar</button>
+                    </div>
+                    <!-- Clave Comentarios -->
+                    <div class="pass-container">
+                        <span class="pass-label">Clave Comentarios: </span>&nbsp;<span class="pass-text" id="comentarios-pass">Sin Clave</span>
+                        <button class="btn-copy" onclick="copyPassword('comentarios-pass', this)">Copiar</button>
+                    </div>
                 </div>
-                <!-- Hash de Verificación -->
+
+                <!-- Hashes de Verificación -->
                 <div class="hash-container">
-                    <span class="hash-label">SHA-256:</span> e84acec3e18bee4b07dec8bb1223c37758028ea5d72a89b7449669d4e61cf65a
+                    <span class="hash-label">SHA-256 (Juego):</span> e84acec3e18bee4b07dec8bb1223c37758028ea5d72a89b7449669d4e61cf65a
+                </div>
+                <div class="hash-container">
+                    <span class="hash-label">SHA-256 (Comentarios):</span> 409eb1ae9410f7a80e028075b187fb64ba6b807e570e1c4b9df5181f4b82c531
                 </div>
             </div>
-            <a href="https://www.mediafire.com/file/u2mwh2os2ivuukt/Pes_2013_%2528123asd%252B%2529.7z/file" class="btn" target="_blank">Obtener Juego</a>
+            
+            <!-- Botones de Acción Agrupados -->
+            <div class="actions-container">
+                <a href="https://www.mediafire.com/file/u2mwh2os2ivuukt/Pes_2013_%2528123asd%252B%2529.7z/file" class="btn" target="_blank">Obtener Juego</a>
+                <a href="https://www.mediafire.com/file/2e1bacf72vsv53p/Comentarios_Espa%25C3%25B1ol_Espa%25C3%25B1a.7z/file" class="btn-secundario" target="_blank">🎙️ Comentarios ES</a>
+            </div>
         </div>
 
     </div>
@@ -194,8 +251,8 @@
     <!-- SECCIÓN DE HERRAMIENTAS EXTRAS -->
     <div class="section-title">🛠️ Herramientas Necesarias</div>
     <div class="grid">
-	
-		<!-- HERRAMIENTA 0: VERIFICADOR HASH -->
+    
+        <!-- HERRAMIENTA 0: VERIFICADOR HASH -->
         <div class="card">
             <div class="card-info">
                 <h3>✔ Verificador De Integridad (Hash)</h3>
@@ -227,18 +284,14 @@
     <!-- FUNCIÓN JAVASCRIPT PARA COPIAR -->
     <script>
         function copyPassword(elementId, button) {
-            // Obtenemos el texto de la clave
             const passwordText = document.getElementById(elementId).innerText;
             
-            // Usamos la API del portapapeles del navegador
             navigator.clipboard.writeText(passwordText).then(() => {
-                // Cambiamos el texto del botón temporalmente
                 const originalText = button.innerText;
                 button.innerText = "¡Copiado!";
                 button.style.backgroundColor = "#00bcd4";
                 button.style.color = "#0f0f12";
                 
-                // Lo regresamos a la normalidad después de 2 segundos
                 setTimeout(() => {
                     button.innerText = originalText;
                     button.style.backgroundColor = "";
