@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.png">
-  <title>Código Vigía | Zona de Descargas</title>
+  <title>Código Vigía | Proyecto de Preservación Histórica y Retro-Emulación</title>
 
   <!-- CSS EXTERNO -->
   <link rel="stylesheet" href="css/style.css">
@@ -20,16 +20,15 @@
         <img src="assets/logo_opt.webp" alt="Código Vigía" class="header-logo" onerror="this.style.display='none'">
         <div class="header-text">
           <h1>Código <span>Vigía</span></h1>
-          <p class="subtitle">Catálogo Oficial de Juegos y Herramientas</p>
+          <p class="subtitle">Preservación Digital & Archivo Histórico de Videojuegos</p>
         </div>
       </div>
     </a>
-    <span class="header-badge">📦 Actualizado 2026</span>
   </header>
 
   <!-- ===== BUSCADOR ===== -->
   <div class="search-wrap">
-    <input type="text" id="searchBar" placeholder="🔍 Buscar juegos, herramientas, hashes..." onkeyup="filtrar()">
+    <input type="text" id="searchBar" placeholder="🔍 Buscar juegos, herramientas, firmas digitales..." onkeyup="filtrar()">
   </div>
 
   <!-- ===== CONTENIDO ===== -->
@@ -39,7 +38,7 @@
     <section class="section" data-categoria="juegos">
       <div class="section-header">
         <h2>🎮 Biblioteca de Juegos</h2>
-        <span class="count" id="countJuegos">4</span>
+        <span class="count" id="countJuegos">5</span>
       </div>
 
       <div class="grid" id="gridJuegos">
@@ -66,15 +65,15 @@
 
             <div class="pass-group">
               <div class="pass-container">
-                <span class="pass-label">Clave</span>
-                <span class="pass-text" id="pass-pes5">Sin Clave</span>
+                <span class="pass-label">Contraseña de Extracción</span>
+                <span class="pass-text" id="pass-pes5">Sin Contraseña</span>
                 <button class="btn-copy" onclick="copiar('pass-pes5', this)">Copiar</button>
               </div>
             </div>
 
             <div class="hash-group">
               <div class="hash-container">
-                <span class="hash-label">SHA-256:</span>
+                <span class="hash-label">Firma Digital (SHA-256):</span>
                 <span class="hash-text"
                   id="hash-pes5">0fbfe91505da4b3deaf82b9e43c82a846642a910207d3921283a0559a018712f</span>
                 <button class="btn-copy-hash" onclick="copiarHash('hash-pes5', this)">Copiar</button>
@@ -83,10 +82,9 @@
           </div>
 
           <div class="actions">
-            <a href="#" class="btn btn-video">▶ Próximo</a>
+            <a href="#" class="btn btn-video">▶ Próximamente</a>
             <a href="https://www.mediafire.com/file/qv4lyoy6wo3p54q/PES_5.iso/file" class="btn btn-primary"
-              target="_blank">💾
-              Descargar</a>
+              target="_blank">📂 Servidor de Resguardo</a>
           </div>
         </div>
 
@@ -108,19 +106,19 @@
           </div>
 
           <div class="card-info">
-            <p class="desc">El archivo del juego base includes los relatos en <strong>español de España</strong>.</p>
+            <p class="desc">El archivo del juego base incluye los relatos en <strong>español de España</strong>.</p>
 
             <div class="pass-group">
               <div class="pass-container">
-                <span class="pass-label">Clave</span>
-                <span class="pass-text" id="pass-pes6">Sin Clave</span>
+                <span class="pass-label">Contraseña de Extracción</span>
+                <span class="pass-text" id="pass-pes6">Sin Contraseña</span>
                 <button class="btn-copy" onclick="copiar('pass-pes6', this)">Copiar</button>
               </div>
             </div>
 
             <div class="hash-group">
               <div class="hash-container">
-                <span class="hash-label">SHA-256:</span>
+                <span class="hash-label">Firma Digital (SHA-256):</span>
                 <span class="hash-text"
                   id="hash-pes6">a8158a3fc0d6fd0dee14f7b88dc57ac6a2dbeb24eb46de37d1c636847fcd80f7</span>
                 <button class="btn-copy-hash" onclick="copiarHash('hash-pes6', this)">Copiar</button>
@@ -129,9 +127,9 @@
           </div>
 
           <div class="actions">
-            <a href="https://www.youtube.com/watch?v=kttMDrXZDpg" class="btn btn-video" target="_blank">▶ Guía</a>
+            <a href="https://www.youtube.com/watch?v=kttMDrXZDpg" class="btn btn-video" target="_blank">▶ Ver Guía</a>
             <a href="https://www.mediafire.com/file/nsvyj41y6tyrxx1/Pes_6.iso/file" class="btn btn-primary"
-              target="_blank">💾 Descargar</a>
+              target="_blank">📂 Servidor de Resguardo</a>
           </div>
         </div>
 
@@ -139,7 +137,7 @@
         <div class="card" data-nombre="pes 7 pro evolution soccer 2008 torrent">
           <div class="card-tags">
             <span class="card-tag tag-game">Juego</span>
-            <span class="card-tag tag-kaspersky tag-kaspersky-alert">⚠️ Kaspersky Alert</span>
+            <span class="card-tag tag-kaspersky tag-kaspersky-ok">🛡️ Kaspersky OK</span>
           </div>
 
           <div class="card-header">
@@ -148,26 +146,27 @@
                 onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'placeholder-icon\'>⚽</span>'">
             </div>
             <div class="card-title-group">
-              <h3>Pro Evolution Soccer 7</h3>
+              <h3>Pro Evolution Soccer 7 (2007)</h3>
             </div>
           </div>
 
           <div class="card-info">
-            <p class="desc">Versión que salió como Winning Eleven. Relatos y textos en español de España y en inglés.</p>
-            <p class="desc"><small>⚡ <em>Requiere cliente de torrent (Recomendado: qBittorrent).</em></small></p>
+            <p class="desc">Edición lanzada originalmente como Winning Eleven. Relatos en español e inglés.</p>
+            <p class="desc"><small>⚡ <em>Requiere gestor de descarga P2P (Ejemplo: qBittorrent).</em></small></p>
 
             <div class="pass-group">
               <div class="pass-container">
-                <span class="pass-label">Clave Juego</span>
-                <span class="pass-text" id="pass-pes7">Sin Clave</span>
+                <span class="pass-label">Contraseña del Archivo</span>
+                <span class="pass-text" id="pass-pes7">Sin Contraseña</span>
                 <button class="btn-copy" onclick="copiar('pass-pes7', this)">Copiar</button>
               </div>
             </div>
 
             <div class="hash-group">
               <div class="hash-container">
-                <span class="hash-label">SHA-256 Juego:</span>
-                <span class="hash-text" id="hash-pes7">7fa79f239a5e5582ea21c59815767db7c5f0b8638e5be02210a8241d2e036eef</span>
+                <span class="hash-label">Firma Digital (SHA-256):</span>
+                <span class="hash-text"
+                  id="hash-pes7">7fa79f239a5e5582ea21c59815767db7c5f0b8638e5be02210a8241d2e036eef</span>
                 <button class="btn-copy-hash" onclick="copiarHash('hash-pes7', this)">Copiar</button>
               </div>
             </div>
@@ -176,12 +175,12 @@
           <div class="actions">
             <a href="#" class="btn btn-video">▶ Próximamente</a>
             <a href="https://archive.org/download/pro-evolution-soccer-2007-iso/pro-evolution-soccer-2007-iso_archive.torrent"
-              class="btn btn-primary">💾 Descargar</a>
+              class="btn btn-primary" target="_blank">📂 Servidor de Resguardo</a>
           </div>
         </div>
 
         <!-- ====== PES 2012 ====== -->
-        <div class="card" data-nombre="pes 2012 pro evolution soccer comentarios español">
+        <div class="card" data-nombre="pes 2012 pro evolution soccer comentarios espanol">
           <div class="card-tags">
             <span class="card-tag tag-game">Juego</span>
             <span class="card-tag tag-kaspersky tag-kaspersky-ok">🛡️ Kaspersky OK</span>
@@ -198,31 +197,30 @@
           </div>
 
           <div class="card-info">
-            <p class="desc">Incluye relatos <strong>español latino</strong>. Los <strong>Comentarios ES</strong> son en
-              español de España (opcional).</p>
+            <p class="desc">Incluye relatos en <strong>español latino</strong>. Paquete opcional con relatos de España disponible.</p>
 
             <div class="pass-group">
               <div class="pass-container">
-                <span class="pass-label">Clave Juego</span>
+                <span class="pass-label">Contraseña para Descomprimir</span>
                 <span class="pass-text" id="pass-pes2012">123asd+</span>
                 <button class="btn-copy" onclick="copiar('pass-pes2012', this)">Copiar</button>
               </div>
               <div class="pass-container">
-                <span class="pass-label">Clave Comentarios</span>
-                <span class="pass-text" id="pass-comentarios2012">Sin Clave</span>
+                <span class="pass-label">Contraseña Comentarios</span>
+                <span class="pass-text" id="pass-comentarios2012">Sin Contraseña</span>
                 <button class="btn-copy" onclick="copiar('pass-comentarios2012', this)">Copiar</button>
               </div>
             </div>
 
             <div class="hash-group">
               <div class="hash-container">
-                <span class="hash-label">SHA-256 Juego:</span>
+                <span class="hash-label">Firma Digital Juego:</span>
                 <span class="hash-text"
                   id="hash-pes2012">07df640c8f339a866281f1d34bf0d83ef2cefc734d34555627e58ed4232eeb6f</span>
                 <button class="btn-copy-hash" onclick="copiarHash('hash-pes2012', this)">Copiar</button>
               </div>
               <div class="hash-container">
-                <span class="hash-label">SHA-256 Comentarios:</span>
+                <span class="hash-label">Firma Comentarios:</span>
                 <span class="hash-text"
                   id="hash-comentarios2012">d3f216a80a357520d1fd8e71dd6c2d9951b43444f13e25fd6970cd0d33207bdc</span>
                 <button class="btn-copy-hash" onclick="copiarHash('hash-comentarios2012', this)">Copiar</button>
@@ -233,14 +231,14 @@
           <div class="actions">
             <a href="#" class="btn btn-video">▶ Próximamente</a>
             <a href="https://www.mediafire.com/file/s41sa6khtftbhpf/PES_2012_%2528123asd%252B%2529.7z/file"
-              class="btn btn-primary" target="_blank">💾 Descargar</a>
+              class="btn btn-primary" target="_blank">📂 Servidor de Resguardo</a>
             <a href="https://www.mediafire.com/file/g85eseg1zbub6ee/Narradores_Espa%25C3%25B1ol_Espa%25C3%25B1a_PES_2012.7z/file"
               class="btn btn-comment" target="_blank">🎙️ Comentarios ES</a>
           </div>
         </div>
 
         <!-- ====== PES 2013 ====== -->
-        <div class="card" data-nombre="pes 2013 pro evolution soccer comentarios español">
+        <div class="card" data-nombre="pes 2013 pro evolution soccer comentarios espanol">
           <div class="card-tags">
             <span class="card-tag tag-game">Juego</span>
             <span class="card-tag tag-kaspersky tag-kaspersky-ok">🛡️ Kaspersky OK</span>
@@ -257,31 +255,30 @@
           </div>
 
           <div class="card-info">
-            <p class="desc">Incluye relatos <strong>español latino</strong>. Los <strong>Comentarios ES</strong> son en
-              español de España (opcional).</p>
+            <p class="desc">Incluye relatos en <strong>español latino</strong>. Paquete opcional con relatos de España disponible.</p>
 
             <div class="pass-group">
               <div class="pass-container">
-                <span class="pass-label">Clave Juego</span>
+                <span class="pass-label">Contraseña para Descomprimir</span>
                 <span class="pass-text" id="pass-pes2013">123asd+</span>
                 <button class="btn-copy" onclick="copiar('pass-pes2013', this)">Copiar</button>
               </div>
               <div class="pass-container">
-                <span class="pass-label">Clave Comentarios</span>
-                <span class="pass-text" id="pass-comentarios2013">Sin Clave</span>
+                <span class="pass-label">Contraseña Comentarios</span>
+                <span class="pass-text" id="pass-comentarios2013">Sin Contraseña</span>
                 <button class="btn-copy" onclick="copiar('pass-comentarios2013', this)">Copiar</button>
               </div>
             </div>
 
             <div class="hash-group">
               <div class="hash-container">
-                <span class="hash-label">SHA-256 Juego:</span>
+                <span class="hash-label">Firma Digital Juego:</span>
                 <span class="hash-text"
                   id="hash-pes2013">e84acec3e18bee4b07dec8bb1223c37758028ea5d72a89b7449669d4e61cf65a</span>
                 <button class="btn-copy-hash" onclick="copiarHash('hash-pes2013', this)">Copiar</button>
               </div>
               <div class="hash-container">
-                <span class="hash-label">SHA-256 Comentarios:</span>
+                <span class="hash-label">Firma Comentarios:</span>
                 <span class="hash-text"
                   id="hash-comentarios2013">409eb1ae9410f7a80e028075b187fb64ba6b807e570e1c4b9df5181f4b82c531</span>
                 <button class="btn-copy-hash" onclick="copiarHash('hash-comentarios2013', this)">Copiar</button>
@@ -290,9 +287,9 @@
           </div>
 
           <div class="actions">
-            <a href="https://www.youtube.com/watch?v=UpyLnmV4Xmg" class="btn btn-video" target="_blank">▶ Guía</a>
+            <a href="https://www.youtube.com/watch?v=UpyLnmV4Xmg" class="btn btn-video" target="_blank">▶ Ver Guía</a>
             <a href="https://www.mediafire.com/file/u2mwh2os2ivuukt/Pes_2013_%2528123asd%252B%2529.7z/file"
-              class="btn btn-primary" target="_blank">💾 Descargar</a>
+              class="btn btn-primary" target="_blank">📂 Servidor de Resguardo</a>
             <a href="https://www.mediafire.com/file/2e1bacf72vsv53p/Comentarios_Espa%25C3%25B1ol_Espa%25C3%25B1a.7z/file"
               class="btn btn-comment" target="_blank">🎙️ Comentarios ES</a>
           </div>
@@ -316,21 +313,20 @@
           </div>
 
           <div class="card-info">
-            <p class="desc">Incluye relatos y textos <strong>multilenguaje</strong> (español España, español Latino,
-              inglés, portugués, etc.).</p>
-            <p class="desc"><small>⚡ <em>Requiere cliente de torrent (Recomendado: qBittorrent).</em></small></p>
+            <p class="desc">Incluye relatos y interfaz <strong>multilenguaje</strong> (español Latino, español España, inglés, etc.).</p>
+            <p class="desc"><small>⚡ <em>Requiere gestor de descarga P2P (Ejemplo: qBittorrent).</em></small></p>
 
             <div class="pass-group">
               <div class="pass-container">
-                <span class="pass-label">Clave Juego</span>
-                <span class="pass-text" id="pass-pes2017">Sin Clave</span>
+                <span class="pass-label">Contraseña para Descomprimir</span>
+                <span class="pass-text" id="pass-pes2017">Sin Contraseña</span>
                 <button class="btn-copy" onclick="copiar('pass-pes2017', this)">Copiar</button>
               </div>
             </div>
 
             <div class="hash-group">
               <div class="hash-container">
-                <span class="hash-label">SHA-256 Juego:</span>
+                <span class="hash-label">Firma Digital Juego:</span>
                 <span class="hash-text" id="hash-pes2017">Próximamente</span>
                 <button class="btn-copy-hash" onclick="copiarHash('hash-pes2017', this)">Copiar</button>
               </div>
@@ -339,7 +335,7 @@
 
           <div class="actions">
             <a href="#" class="btn btn-video">▶ Próximamente</a>
-            <a href="#" class="btn btn-primary">💾 Próximamente</a>
+            <a href="#" class="btn btn-primary">📂 Próximamente</a>
           </div>
         </div>
 
@@ -349,7 +345,7 @@
     <!-- ===== SECCIÓN: HERRAMIENTAS ===== -->
     <section class="section" data-categoria="herramientas">
       <div class="section-header">
-        <h2>🛠️ Herramientas Necesarias</h2>
+        <h2>🛠️ Herramientas de Soporte y Optimización</h2>
         <span class="count" id="countHerramientas">4</span>
       </div>
 
@@ -373,13 +369,13 @@
           </div>
 
           <div class="card-info">
-            <p class="desc">Verifica la integridad de tus archivos mediante el algoritmo <strong>SHA-256</strong>.</p>
+            <p class="desc">Programa para confirmar que tus archivos no estén dañados usando el código <strong>SHA-256</strong>.</p>
           </div>
 
           <div class="actions">
-            <a href="https://www.youtube.com/watch?v=H_QwAhhVxlA" class="btn btn-video" target="_blank">▶ Guía</a>
+            <a href="https://www.youtube.com/watch?v=H_QwAhhVxlA" class="btn btn-video" target="_blank">▶ Ver Guía</a>
             <a href="https://www.mediafire.com/file/rn05hhwtooygd4f/verificador-hash-main.zip/file" class="btn btn-tool"
-              target="_blank">⬇ Descargar</a>
+              target="_blank">📦 Servidor de Resguardo</a>
           </div>
         </div>
 
@@ -401,14 +397,12 @@
           </div>
 
           <div class="card-info">
-            <p class="desc">Extractor de archivos necesario para descomprimir <strong>.7z</strong> o
-              <strong>.rar</strong>.
-            </p>
+            <p class="desc">Descompresor gratuito de código abierto para abrir archivos <strong>.7z</strong> o <strong>.rar</strong>.</p>
           </div>
 
           <div class="actions">
             <a href="#" class="btn btn-video">▶ Próximamente</a>
-            <a href="https://peazip.github.io/" class="btn btn-tool" target="_blank">⬇ Descargar</a>
+            <a href="https://peazip.github.io/" class="btn btn-tool" target="_blank">🌐 Sitio Oficial</a>
           </div>
         </div>
 
@@ -430,12 +424,12 @@
           </div>
 
           <div class="card-info">
-            <p class="desc">Acelera tus descargas y evita que se cancelen a mitad de camino.</p>
+            <p class="desc">Gestor de transferencias que acelera la velocidad y recupera conexiones interrumpidas.</p>
           </div>
 
           <div class="actions">
             <a href="#" class="btn btn-video">▶ Próximamente</a>
-            <a href="https://www.freedownloadmanager.org/es/" class="btn btn-tool" target="_blank">⬇ Descargar</a>
+            <a href="https://www.freedownloadmanager.org/es/" class="btn btn-tool" target="_blank">🌐 Sitio Oficial</a>
           </div>
         </div>
 
@@ -457,12 +451,12 @@
           </div>
 
           <div class="card-info">
-            <p class="desc">Descarga tus torrents de forma sencilla, rápida y sin límites.</p>
+            <p class="desc">Cliente de código abierto para la red P2P, ligero y libre de publicidad.</p>
           </div>
 
           <div class="actions">
             <a href="#" class="btn btn-video">▶ Próximamente</a>
-            <a href="https://www.qbittorrent.org/download" class="btn btn-tool" target="_blank">⬇ Descargar</a>
+            <a href="https://www.qbittorrent.org/download" class="btn btn-tool" target="_blank">🌐 Sitio Oficial</a>
           </div>
         </div>
 
@@ -473,8 +467,15 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <p>Código Vigía &mdash; Todos los derechos reservados &bull; 2026</p>
-    <p class="footer-hash">Verifica siempre los hashes SHA-256 antes de instalar cualquier archivo.</p>
+    <p>Código Vigía &mdash; Proyecto de Preservación Digital &bull; 2026</p>
+
+    <p class="footer-disclaimer">
+      <strong>Aviso de Preservación:</strong> Este sitio web es una biblioteca sin fines de lucro destinada a la
+      documentación, análisis e investigación histórica de software discontinuado (abandoneware). No alojamos software
+      en nuestros servidores. Todos los nombres, marcas y marcas registradas son propiedad de sus respectivos dueños.
+    </p>
+
+    <p class="footer-hash">Verifica siempre los hashes SHA-256 para comprobar la integridad de los archivos.</p>
   </footer>
 
   <!-- ===== JAVASCRIPT EXTERNO ===== -->
