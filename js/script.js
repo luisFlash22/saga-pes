@@ -60,7 +60,38 @@ function filtrar() {
   actualizarContadores();
 }
 
-// ===== INICIALIZAR CONTADORES AL CARGAR LA PÁGINA =====
+// ===== FILTRADO AUTOMÁTICO POR URL (?b=termino) =====
 document.addEventListener('DOMContentLoaded', () => {
   actualizarContadores();
+
+  // Leer los parámetros de la URL (ej: ?b=pes-2017, ?b=pes+2017 o ?b=pes 2017)
+  const params = new URLSearchParams(window.location.search);
+  const parametroUrl = params.get('b') || params.get('juego');
+
+  if (parametroUrl) {
+    const searchBar = document.getElementById('searchBar');
+    if (searchBar) {
+      // Reemplaza automáticamente guiones y signos de más por espacios para evitar errores
+      const busquedaLimpia = parametroUrl.replace(/[-+]/g, ' ').trim();
+
+      searchBar.value = busquedaLimpia;
+      filtrar();
+
+      // Hace un scroll suave directo hacia la primera tarjeta visible
+      setTimeout(() => {
+        const tarjetaVisible = document.querySelector('.card:not(.hidden)');
+        if (tarjetaVisible) {
+          tarjetaVisible.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Pequeño efecto visual de enfoque
+          tarjetaVisible.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+          tarjetaVisible.style.transform = 'scale(1.02)';
+          tarjetaVisible.style.boxShadow = '0 0 20px rgba(52, 152, 219, 0.6)';
+          setTimeout(() => {
+            tarjetaVisible.style.transform = 'none';
+            tarjetaVisible.style.boxShadow = 'none';
+          }, 1500);
+        }
+      }, 2005);
+    }
+  }
 });
