@@ -41,7 +41,8 @@ function copiarHash(elementId, boton) {
 
 // ===== BUSCADOR =====
 function filtrar() {
-  const busqueda = document.getElementById('searchBar').value.toLowerCase().trim();
+  const searchBar = document.getElementById('searchBar');
+  const busqueda = searchBar.value.toLowerCase().trim();
   const todasLasCards = document.querySelectorAll('.card');
 
   todasLasCards.forEach(card => {
@@ -58,6 +59,19 @@ function filtrar() {
 
   // Actualiza los contadores dinámicamente según lo que esté visible en pantalla
   actualizarContadores();
+
+  // Limpia o actualiza el parámetro 'b' en la URL sin recargar la página
+  const url = new URL(window.location);
+  if (busqueda === '') {
+    // Si la barra está vacía, borramos el parámetro 'b' (y 'juego' por si acaso) de la URL
+    url.searchParams.delete('b');
+    url.searchParams.delete('juego');
+  } else {
+    // Opcional: Si el usuario escribe manualmente en la barra, podemos actualizar la URL en tiempo real
+    url.searchParams.set('b', searchBar.value.trim());
+  }
+  // Aplica el cambio en el navegador de manera fluida
+  window.history.replaceState({}, '', url);
 }
 
 // ===== FILTRADO AUTOMÁTICO POR URL (?b=termino) =====
