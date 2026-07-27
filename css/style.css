@@ -461,7 +461,7 @@ body {
 
 .hash-text {
   color: #b0acc0;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   flex: 1;
   min-width: 120px;
 }
@@ -496,7 +496,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 14px;
   padding-top: 14px;
   border-top: 1px solid #14141e;
   flex-shrink: 0;
