@@ -347,6 +347,18 @@ body {
   border: 1px solid #2a1a3a;
 }
 
+.text-white {
+  color: #fff;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
 /* ===== INFO ===== */
 .card-info {
   flex: 1;
